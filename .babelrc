@@ -5,8 +5,10 @@
 			{
 				"targets": {
 					"node": "current",
-				}
-			}
-    ],
-	]
+					"browsers": "last 2 versions, > 1%"
+				},
+				"useBuiltIns": "usage"
+			},
+		],
+	],
 }
