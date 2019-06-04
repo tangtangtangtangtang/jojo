@@ -1,0 +1,41 @@
+{
+	"name": "jojo",
+	"version": "0.0.1",
+	"description": "工具🔧 库",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/tangtangtangtangtang/jojo.git"
+	},
+	"jest": {},
+	"keywords": [
+		"tools"
+	],
+	"author": "tangtangtangtangtang",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/tangtangtangtangtang/jojo/issues"
+	},
+	"homepage": "https://github.com/tangtangtangtangtang/jojo#readme",
+	"devDependencies": {
+		"babel-core": "^6.26.3",
+		"babel-istanbul": "^0.12.2",
+		"babel-plugin-import": "^1.11.2",
+		"babel-preset-es2015": "^6.24.1",
+		"benchmark": "^2.1.4",
+		"chai": "^4.2.0",
+		"istanbul": "^0.4.5",
+		"jest": "^24.8.0",
+		"mocha": "^6.1.4",
+		"mochawesome": "^3.1.2",
+		"selenium-webdriver": "^4.0.0-alpha.1",
+		"supertest": "^3.4.2"
+	},
+	"dependencies": {
+		"@babel/preset-env": "^7.4.5",
+		"@babel/preset-react": "^7.0.0"
+	}
+}
