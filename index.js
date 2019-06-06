@@ -1,7 +1,7 @@
-import common from './src/common'
-import url from './src/url'
+const common = require('./src/common')
+const url = require('./src/url')
 
-export default {
+module.exports = {
   common,
   url
 }
