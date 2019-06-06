@@ -7,11 +7,10 @@ const common = require('../common')
  */
 export const objectToQueryString = (obj) => {
   if (!common.isObject(obj)) return ''
-  if (Object.prototype.toString.call(obj) !== '[object Object]') return ''
   return Object.keys(obj)
     .map(key => {
-      if (!key || !obj[key]) return ''
-      return `${key}=${encodeURIComponent(obj[key])}`
+      if (!key) return ''
+      return `${key}=${encodeURIComponent(obj[key] || '')}`
     })
     .filter(item => item !== '')
     .join('&')

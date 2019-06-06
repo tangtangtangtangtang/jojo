@@ -2,7 +2,7 @@
 const URL = require('../src/url/index')
 test('测试objectToQueryString', () => {
   expect(URL.objectToQueryString({ 'key': 'value' })).toBe('key=value')
-  expect(URL.objectToQueryString({ 'key': 'value', '': 'value', 'key3': '', 'key2':'value2' })).toBe('key=value&key2=value2')
+  expect(URL.objectToQueryString({ 'key': 'value', '': 'value', 'key3': '', 'key2':'value2' })).toBe('key=value&key3=&key2=value2')
 })
 
 test('test测试queryStringToObject', () => {
