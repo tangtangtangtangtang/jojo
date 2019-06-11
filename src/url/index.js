@@ -23,6 +23,7 @@ export const objectToQueryString = (obj) => {
  */
 export const queryStringToObject = (str) => {
   const result = {}
+  if (typeof str !== 'string') return result
   str.split('&')
     .forEach(item => {
       if (!item) return
