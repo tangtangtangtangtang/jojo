@@ -1,12 +1,16 @@
 {
 	"name": "@lianjia/act3",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"description": "工具🔧 库",
-	"main": "index.js",
+	"main": "./build/index.js",
+	"prepublishOnly": "npm run build",
 	"scripts": {
 		"test": "jest",
 		"build": "jest && webpack"
 	},
+	"files": [
+		"dist"
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+ssh://git@github.com/tangtangtangtangtang/jojo.git"
