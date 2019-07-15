@@ -1,11 +1,11 @@
 {
-	"name": "act3",
-	"version": "0.0.2",
+	"name": "@lianjia/act3",
+	"version": "0.0.4",
 	"description": "工具🔧 库",
 	"main": "index.js",
 	"scripts": {
 		"test": "jest",
-		"build": "webpack"
+		"build": "jest && webpack"
 	},
 	"repository": {
 		"type": "git",

@@ -16,6 +16,7 @@ test('test测试queryStringToObject', () => {
   expect(URL.queryStringToObject('')).toStrictEqual({})
   expect(URL.queryStringToObject('a=b')).toStrictEqual({a: 'b'})
   expect(URL.queryStringToObject('a=b&c=d')).toStrictEqual({a: 'b', c: 'd'})
+  expect(URL.queryStringToObject('?a=b&c=d')).toStrictEqual({a: 'b', c: 'd'})
 })
 
 test('test测试getUrlParam', () => {

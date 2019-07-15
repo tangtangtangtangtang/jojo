@@ -24,6 +24,7 @@ export const objectToQueryString = (obj) => {
 export const queryStringToObject = (str) => {
   const result = {}
   if (typeof str !== 'string') return result
+  if (str.startsWith('?')) str = str.slice(1)
   str.split('&')
     .forEach(item => {
       if (!item) return
