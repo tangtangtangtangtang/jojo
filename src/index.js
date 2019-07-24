@@ -1,5 +1,5 @@
-const common = require('./src/common')
-const url = require('./src/url')
+const common = require('./common')
+const url = require('./url')
 
 module.exports = {
   common,

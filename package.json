@@ -1,13 +1,14 @@
 {
 	"name": "@lianjia/act3",
-	"version": "0.0.6",
+	"version": "0.0.8",
 	"description": "工具🔧 库sdf",
 	"main": "./es/index.js",
 	"prepublishOnly": "npm run build",
 	"scripts": {
 		"test": "jest",
-		"build": "jest && webpack",
-		"build-es": "node ./build/build-components.js"
+		"build": "run-p build-webpack build-es",
+		"build-es": "node ./build/build-components.js",
+		"build-webpack": "jest && webpack "
 	},
 	"files": [
 		"dist",
@@ -34,6 +35,7 @@
 		"@babel/plugin-transform-runtime": "^7.5.5",
 		"@babel/preset-env": "^7.0.0",
 		"babel-plugin-import": "^1.11.2",
+		"npm-run-all": "^4.1.5",
 		"webpack": "^4.32.2",
 		"webpack-cli": "^3.3.2"
 	},
