@@ -19,6 +19,15 @@ require("core-js/modules/es6.object.to-string");
 
 require("core-js/modules/es6.object.keys");
 
+/*
+ * @Description: url相关工具类
+ * @产品wiki地址:
+ * @接口wiki地址:
+ * @Author: TangXiaozhuo
+ * @Date: 2019-08-13 17:08:43
+ * @LastEditTime: 2019-08-13 17:16:13
+ * @LastEditors: Tang
+ */
 var common = require('../common');
 /**
  * @description 把对象变成urlencoded字符串
@@ -28,9 +37,11 @@ var common = require('../common');
 
 
 var objectToQueryString = function objectToQueryString(obj) {
+  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
   if (!common.isObject(obj)) return '';
   return Object.keys(obj).map(function (key) {
     if (!key) return '';
+    if (options.strict && !obj[key]) return '';
     return "".concat(key, "=").concat(encodeURIComponent(obj[key] || ''));
   }).filter(function (item) {
     return item !== '';

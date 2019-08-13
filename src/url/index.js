@@ -1,3 +1,12 @@
+/*
+ * @Description: url相关工具类
+ * @产品wiki地址:
+ * @接口wiki地址:
+ * @Author: TangXiaozhuo
+ * @Date: 2019-08-13 17:08:43
+ * @LastEditTime: 2019-08-13 17:16:13
+ * @LastEditors: Tang
+ */
 const common = require('../common')
 
 /**
@@ -5,11 +14,12 @@ const common = require('../common')
  * @param obj {Object} {'a':'b','c':'d','e':'','':'f'}
  * @return a=b&c=d
  */
-export const objectToQueryString = (obj) => {
+export const objectToQueryString = (obj, options = {}) => {
   if (!common.isObject(obj)) return ''
   return Object.keys(obj)
     .map(key => {
       if (!key) return ''
+      if (options.strict && !obj[key]) return ''
       return `${key}=${encodeURIComponent(obj[key] || '')}`
     })
     .filter(item => item !== '')
