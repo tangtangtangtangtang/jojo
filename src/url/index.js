@@ -4,7 +4,7 @@
  * @接口wiki地址:
  * @Author: TangXiaozhuo
  * @Date: 2019-08-13 17:08:43
- * @LastEditTime: 2019-08-13 17:16:13
+ * @LastEditTime: 2019-09-09 20:11:54
  * @LastEditors: Tang
  */
 const common = require('../common')
@@ -19,8 +19,8 @@ export const objectToQueryString = (obj, options = {}) => {
   return Object.keys(obj)
     .map(key => {
       if (!key) return ''
-      if (options.strict && !obj[key]) return ''
-      return `${key}=${encodeURIComponent(obj[key] || '')}`
+      if (options.strict && [null, undefined, ''].indexOf(obj[key]) > -1) return ''
+      return `${key}=${encodeURIComponent(obj[key])}`
     })
     .filter(item => item !== '')
     .join('&')
