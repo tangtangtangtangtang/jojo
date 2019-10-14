@@ -1,6 +1,6 @@
 {
 	"name": "@lianjia/act3",
-	"version": "0.0.11",
+	"version": "0.0.12",
 	"description": "工具🔧 库sdf",
 	"main": "./es/index.js",
 	"prepublishOnly": "npm run build",

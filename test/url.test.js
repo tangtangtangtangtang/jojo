@@ -4,7 +4,7 @@
  * @接口wiki地址:
  * @Author: TangXiaozhuo
  * @Date: 2019-08-13 17:08:43
- * @LastEditTime: 2019-09-09 20:10:52
+ * @LastEditTime: 2019-10-14 20:25:45
  * @LastEditors: Tang
  */
 /* eslint-disable */
@@ -26,6 +26,8 @@ test('测试objectToQueryString', () => {
   expect(URL.objectToQueryString({ key: '1', key2: null, key3: '', key4: undefined, key5: 0}, options)).toBe('key=1&key5=0')
   expect(URL.objectToQueryString({ 'key': 'value' }, options)).toBe('key=value')
   expect(URL.objectToQueryString({ 'key': 'value', '': 'value', 'key3': '', 'key2':'value2' }, options)).toBe('key=value&key2=value2')
+  // encode false
+  expect(URL.objectToQueryString({ 'key': 'value/' }, { encode: false })).toBe('key=value/')
 })
 
 test('test测试queryStringToObject', () => {
